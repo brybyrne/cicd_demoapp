@@ -18,7 +18,14 @@ class HelloUniverse(Resource):
         text = "Hello Universe!"
         return text
 
-api.add_resource(HelloUniverse, '/hello/universe')
+api.add_resource(HelloHaters, '/hello/Haters')
+
+class HelloUniverse(Resource):
+    def get(self):
+        text = "Hello Haters!"
+        return text
+
+api.add_resource(HelloUniverse, '/hello/haters')
 
 if __name__ == '__main__':
     # Runn Flask
